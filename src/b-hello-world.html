@@ -1,13 +1,19 @@
 <element name="b-hello-world">
     <style>
-        
+        b-hello-world {
+            text-align: center;
+            font-weight: bold;
+            color: red;
+        }
     </style>
     <template>
-        
+        <p>Hello world!</p>
     </template>
     <script>
         ({
-            
+            readyCallback: function() {
+                this.appendChild(this.template.content.cloneNode(true));
+            }
         });
     </script>
 </element>
