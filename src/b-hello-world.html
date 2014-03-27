@@ -1,6 +1,6 @@
 <element name="b-hello-world">
     <style>
-        b-hello-world {
+        :host {
             text-align: center;
             font-weight: bold;
             color: red;
@@ -12,7 +12,8 @@
     <script>
         ({
             readyCallback: function() {
-                this.appendChild(this.template.content.cloneNode(true));
+                var root = this.createShadowRoot();
+                root.appendChild(this.template.content.cloneNode(true));
             }
         });
     </script>
