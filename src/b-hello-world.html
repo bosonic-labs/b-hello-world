@@ -11,7 +11,7 @@
     </template>
     <script>
         ({
-            readyCallback: function() {
+            createdCallback: function() {
                 var root = this.createShadowRoot();
                 root.appendChild(this.template.content.cloneNode(true));
             }
