@@ -1,2 +1,1 @@
-b-hello-world
-=============
+## `b-hello-world` has been deprecated
